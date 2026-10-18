@@ -1,0 +1,103 @@
+.explain-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.explain-hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 12px;
+}
+
+.explain-empty {
+  text-align: center;
+  color: #666;
+  padding: 24px 16px;
+}
+
+/* Lista de features (chips com barra de contribuição) */
+.explain-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.explain-feature-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 8px;
+  background: var(--background, #fff);
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.explain-feature-chip:hover {
+  border-color: var(--primary, #4f46e5);
+}
+
+.explain-feature-chip.active {
+  border-color: var(--primary, #4f46e5);
+  background: #eef2ff;
+  font-weight: 600;
+}
+
+.explain-feature-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explain-feature-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.explain-feature-bar {
+  flex: 0 0 120px;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.explain-feature-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--primary, #4f46e5);
+}
+
+/* Decomposição por dia */
+.explain-day-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.explain-day-picker label {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.explain-day-picker select {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 6px 10px;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.explain-day-summary {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}

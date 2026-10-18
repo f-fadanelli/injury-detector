@@ -1,0 +1,85 @@
+.signin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-md);
+  background-color: var(--background);
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.signin-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: var(--spacing-md);
+}
+
+.signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.signin-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.signin-field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.signin-error {
+  font-size: 0.8rem;
+  color: var(--error);
+  margin-top: var(--spacing-xs);
+}
+
+.signin-button {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.signin-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.signin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.signin-register-link {
+  font-size: 0.875rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.signin-register-link a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.signin-register-link a:hover {
+  text-decoration: underline;
+}

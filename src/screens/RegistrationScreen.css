@@ -1,0 +1,191 @@
+/* ===========================
+   Registration Screen Styles
+   Mobile-first responsive approach
+   =========================== */
+
+.registration-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--background);
+}
+
+.registration-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.registration-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: var(--spacing-sm);
+}
+
+.registration-title {
+  font-size: 1.5rem;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Tab indicators */
+.registration-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  width: 100%;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.registration-tab-label {
+  font-size: 0.85rem;
+  color: #757575;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius) var(--radius) 0 0;
+  white-space: nowrap;
+}
+
+.registration-tab-label.active {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: -2px;
+}
+
+/* Tab content */
+.registration-tab-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Photo upload */
+.photo-upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.photo-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.photo-upload-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+.photo-upload-btn:hover {
+  opacity: 0.9;
+}
+
+/* Birth date row */
+.birth-date-row {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.birth-date-row select {
+  flex: 1;
+}
+
+/* Navigation buttons */
+.registration-nav-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.btn-secondary:hover {
+  background-color: #E3F2FD;
+}
+
+/* Sign in link */
+.registration-signin-link {
+  font-size: 0.875rem;
+  color: #757575;
+  text-align: center;
+}
+
+.registration-signin-link a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* ===========================
+   Mobile (<768px): single-column stacked layout (default)
+   All form fields are already single-column by default
+   =========================== */
+
+/* ===========================
+   Tablet breakpoint (768px+)
+   =========================== */
+@media (min-width: 768px) {
+  .registration-container {
+    max-width: 600px;
+    padding: var(--spacing-lg);
+  }
+
+  .registration-logo {
+    width: 150px;
+  }
+
+  .registration-title {
+    font-size: 1.75rem;
+  }
+
+  .registration-tab-label {
+    font-size: 0.9rem;
+  }
+}

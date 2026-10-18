@@ -1,0 +1,344 @@
+/* ===========================
+   Training Information Screen Styles
+   Mobile-first responsive approach
+   =========================== */
+
+.training-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.training-content {
+  flex: 1;
+  padding: var(--spacing-md);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header row: back + title + add button */
+.training-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.training-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.training-title {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Back button */
+.training-back-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.training-back-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Add button */
+.training-add-btn {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 500;
+}
+
+.training-add-btn:hover {
+  opacity: 0.9;
+}
+
+/* Filters */
+.training-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: flex-end;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm);
+  background-color: var(--surface, #f9f9f9);
+  border-radius: 8px;
+}
+
+.training-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.training-filter-group label {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #666);
+  font-weight: 500;
+}
+
+.training-filter-group input,
+.training-filter-group select {
+  padding: 6px 10px;
+  border: 1px solid var(--border, #ddd);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.training-filter-clear {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  align-self: flex-end;
+}
+
+.training-filter-clear:hover {
+  text-decoration: underline;
+}
+
+/* Table container - horizontally scrollable on mobile */
+.training-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--spacing-md);
+}
+
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+.training-table th,
+.training-table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.training-table th {
+  font-weight: 600;
+  color: var(--text);
+  background-color: #F5F5F5;
+}
+
+.training-table td {
+  color: var(--text);
+}
+
+.training-edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.training-edit-btn:hover {
+  opacity: 0.7;
+}
+
+/* Modal overlay */
+.training-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--spacing-md);
+}
+
+.training-modal-content {
+  background-color: var(--background, #fff);
+  border-radius: var(--radius, 8px);
+  padding: var(--spacing-lg, 24px);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Form styles */
+.training-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.training-form-title {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.training-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.training-form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.training-form-group input,
+.training-form-group select {
+  width: 100%;
+}
+
+.training-form-group .field-error {
+  font-size: 0.75rem;
+  color: var(--error);
+}
+
+/* Form action buttons */
+.training-form-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.btn-save {
+  background-color: var(--success);
+  color: #FFFFFF;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.btn-save:hover {
+  opacity: 0.9;
+}
+
+.btn-delete {
+  background-color: var(--error);
+  color: #FFFFFF;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.btn-cancel:hover {
+  background-color: #F5F5F5;
+}
+
+/* Empty state */
+.training-empty {
+  text-align: center;
+  color: #757575;
+  padding: var(--spacing-lg);
+}
+
+/* ===========================
+   Tablet breakpoint (768px+)
+   =========================== */
+@media (min-width: 768px) {
+  .training-content {
+    padding: var(--spacing-lg);
+  }
+
+  .training-title {
+    font-size: 1.75rem;
+  }
+
+  .training-form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .training-form-title {
+    grid-column: 1 / -1;
+  }
+
+  .training-form-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ===========================
+   Desktop breakpoint (1024px+)
+   =========================== */
+@media (min-width: 1024px) {
+  .training-form-fields {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cabeçalhos ordenáveis */
+.training-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.training-table th.sortable:hover {
+  color: var(--primary, #4f46e5);
+}
+
+/* Paginação */
+.training-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.training-page-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 6px;
+  background: var(--background, #fff);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.training-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.training-page-info {
+  font-size: 0.9rem;
+  color: #555;
+}
